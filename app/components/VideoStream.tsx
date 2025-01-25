@@ -72,7 +72,7 @@ export const VideoStream = () => {
    if (!stream) return;
 
    console.log('Attempting WebSocket connection...');
-   const ws = new WebSocket('ws://0.0.0.0:8000/ws');
+   const ws = new WebSocket('ws://0.0.0.0:8080/ws');
    wsRef.current = ws;
 
    ws.onopen = () => {
