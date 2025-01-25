@@ -84,8 +84,9 @@ export const VideoStream = () => {
   useEffect(() => {
     if (!stream) return;
 
-    const WS_URL = process.env.NEXT_PUBLIC_WS_URL || 'ws://0.0.0.0:8080/ws';
+    const WS_URL = process.env.NEXT_PUBLIC_WS_URL || 'ws://0.0.0.0:8081/ws';
     console.log('Attempting WebSocket connection...');
+    console.log(WS_URL)
     const ws = new WebSocket(WS_URL);
     wsRef.current = ws;
 
